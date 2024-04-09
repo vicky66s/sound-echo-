@@ -1,0 +1,29 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Sampling frequency
+fs = 44100
+
+# Time vector
+t = np.arange(0, 2, 1/fs)
+
+# Original signal (sine wave)
+x = np.sin(2 * np.pi * 1000 * t)
+
+# Delay parameters
+delay_time = 0.5  # in seconds
+gain = 0.8
+
+# Create delayed signal
+delay_samples = int(delay_time * fs)
+delayed_signal = np.concatenate((np.zeros(delay_samples), x[:-delay_samples]))
+
+# Add echo to original signal
+echoed_signal = x + gain * delayed_signal
+
+# Plot original and echoed signals
+plt.subplot(2, 1, 1)
+plt.plot(t, x)
+plt.title('Original Signal')
+plt.xlabel('Time (s)')
+plt.ylabel('Amplit
