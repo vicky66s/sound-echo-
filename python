@@ -1,10 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Sampling frequency
+# Sampling frequency:
 fs = 44100
 
-# Time vector
+# Time vector:
 t = np.arange(0, 2, 1/fs)
 
 # Original signal (sine wave)
