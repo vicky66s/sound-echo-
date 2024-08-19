@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Sampling frequency
+# Sampling frequency00000000.0
 fs = 44100
 
 # Time vector:
